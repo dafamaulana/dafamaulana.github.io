@@ -1,0 +1,236 @@
+    <title>05211940000141.html</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+  
+  </style>
+</head>
+<body>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <h1>MUHAMMAD DAFA MAULANA</h1>
+  <p>05211940000141</p> 
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>    
+    </ul>
+  </div>  
+</nav>
+
+<div class="container" style="margin-top:30px">
+  <div class="row">
+    <div class="col-sm-4">
+      <h2>About Me</h2>
+      <h5>Photo of me:</h5>
+      <img class="img-fluid" src="img_chania.jpg" alt="Chania" width="460" height="345">
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+      <h3>Some Links</h3>
+      <p>Lorem ipsum dolor sit ame.</p>
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+      <hr class="d-sm-none">
+    </div>
+    <div class="col-sm-8">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <img src="paris.jpg" class="mx-auto d-block" style="width:50%">
+      <p>Some text..</p>
+      <p>saya ganteng </p>
+      <h2>percobaan bootstrap</h2>
+      <h5>06-07-2001</h5>
+      <img src="paris.jpg" class="mx-auto d-block" style="width:50%">
+      <p>Some text..</p>
+      <p>SAYA BERKULIAH DI ITS</p>
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p>Footer</p>
+</div>
+ <style>.submit { margin-left: 125px; margin-top: 10px;}
+    .label {float: left; width: 120px; }
+    .infobox {width: 120px; }
+    .error { color: red; padding-left: 10px; }
+    div{padding: 5px; }
+    .chkb { margin-left: 125px; margin-top: 10px;}
+    .radiobtn { margin-left: 125px; margin-top: 10px;}
+    .inputs{background-color:cyan}
+    fieldset{
+    border:1px solid #888;
+    }
+    legend{
+    border:1px solid #888;
+    background-color:rgb(0, 255, 106);
+    color:blue;
+    font-weight:bold;
+    padding:.5em
+    }
+  
+    </style>   
+
+<body>
+  
+    <form>
+    <fieldset>
+    <legend>masukkan informasi</legend>
+    <div id="u"> <span class="label">User Id </span><input type="text" class="userid"
+    name="userid" /><span class="error">User id hanya bisa angka, huruf </span></div>
+    <div id="p"><span class="label">Password </span><input type="password" class="password"
+    name="password" /><span class="error"> password tidak bisa kosong</span></div>
+    <div><span class="label">Email Address </span><input type="text" class="emailadd"
+    name="emailid" /><span class="error"> email salah</span></div>
+    </fieldset>
+    <fieldset>
+    <div><span class="label">pilih makanan</span><br><input type="checkbox" id="pizza"
+    name="pizza" value=5 class="chkb">Pizza $5 <br>
+    <script>$(document).ready(function() {
+        $('.error').hide();
+        $('.userid').focus(function(){
+        $(this).addClass('inputs');
+        });
+        $('.password').focus(function(){
+        $(this).addClass('inputs');
+        });
+        $('.emailadd').focus(function(){
+        $(this).addClass('inputs');
+        }); $('.fooderror').addClass('error');
+ $('.fooderror').hide();
+ $('.payerror').addClass('error');
+ $('.payerror').hide();
+ $('.submit').click(function(event){
+ var data=$('.userid').val();
+ if(validate_userid(data))
+ {
+ $('.userid').next().hide();
+ }
+ else
+ {
+ $('.userid').next().show();
+ }
+ data=$('.password').val();
+ var len=data.length;
+ if(len<1)
+ {
+ $('.password').next().show();
+ }
+ else
+ {
+ $('.password').next().hide();
+ }
+ data=$('.emailadd').val();
+ if(valid_email(data))
+ {
+ $('.emailadd').next().hide();
+ }
+ else
+ {
+ $('.emailadd').next().show();
+ }
+ var count=0;
+ $('div').find(':checkbox').each(function(){
+ if($(this).is(':checked'))
+ {
+ count++;
+ }
+ });
+ if(count==0)
+ {
+ $('.fooderror').css({'margin-left':250}).show();
+ }else
+ {
+ $('.fooderror').hide();
+ }
+ count=0;
+ $('div').find(':radio').each(function(){
+ if($(this).is(':checked'))
+ {
+ count++;
+ }
+ });
+ if(count==0)
+ {
+ $('.payerror').css({'margin-left':250}).show();
+ }
+ else
+ {
+ $('.payerror').hide();
+ }
+ count=$('select option:selected').val();
+ if(count==0)
+ {
+ $('.infobox').next().show();
+ }
+ else
+ {
+ $('.infobox').next().hide();
+ }
+ event.preventDefault();
+ });
+});
+function valid_email(email)
+{
+ var pattern= new RegExp(/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]+$/);
+ return pattern.test(email);
+}
+function validate_userid(uid)
+{
+ var pattern= new RegExp(/^[a-z0-9_]+$/);
+ return pattern.test(uid);
+} </script>
+    <input type="checkbox" id="hotdog" name="hotdog" value=2 class="chkb">HotDog $2<br>
+    <input type="checkbox" id="coke" name="coke" value=1 class="chkb">Coke $1<br>
+    <input type="checkbox" id="fries" name="fries" value=3 class="chkb">French Fries $3<br>
+    <span class="fooderror">anda belum mengisi makanan</span></div>
+    <div><span class="label">Mode of Payment</span><br><input type="radio" name="paymode"
+    class="radiobtn" value="Master Card">Master Card <br>
+    <input type="radio" name="paymode" class="radiobtn" value="ANZ Grindlay Card">ANZ Grindlay
+    Card<br>
+    <input type="radio" name="paymode" class="radiobtn" value="Visa Card">Visa Card<br>
+    <span class="payerror">kamu belum mengisi payment method</span></div>
+    </fieldset>
+    <fieldset>
+    <div><span class="label">Country</span><select id="country" class="infobox">
+    <option value="0">Select a Country</option>
+    <option value="USA">USA</option>
+    <option value="United Kingdom">United Kingdom</option>
+    <option value="India">India</option>
+    <option value="China">China</option>
+    </select>
+    </fieldset>
+    <span class="error"> Please select the country</span></div>
+    </form>
+    </body>
+    </body>
+    </html>
